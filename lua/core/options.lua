@@ -57,6 +57,5 @@ opt.foldenable = true
 
 opt.hidden = true
 opt.confirm = true
-opt.lazyredraw = true
 opt.shortmess:append("c")
 opt.whichwrap:append("<>[]hl")
