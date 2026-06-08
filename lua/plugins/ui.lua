@@ -13,6 +13,7 @@ require("catppuccin").setup({
 		bufferline = true,
 		notify = true,
 		gitsigns = true,
+		lazygit = true,
 		mason = true,
 		mini = {
 			enabled = true,
