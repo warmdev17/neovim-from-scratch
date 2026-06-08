@@ -50,8 +50,10 @@ opt.laststatus = 3
 opt.pumheight = 10
 
 opt.foldmethod = "expr"
-opt.foldexpr = "nvim_treesitter#foldexpr()"
+opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 opt.foldlevel = 99
+opt.foldlevelstart = 99
+opt.foldenable = true
 
 opt.hidden = true
 opt.confirm = true
