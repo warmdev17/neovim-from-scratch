@@ -14,6 +14,9 @@ require("snacks").setup({
 	terminal = {
 		enabled = true,
 	},
+	lazygit = {
+		enabled = true,
+	},
 })
 
 require("oil").setup({
