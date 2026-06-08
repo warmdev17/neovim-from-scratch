@@ -40,3 +40,98 @@ vim.api.nvim_set_hl(0, "DiagnosticError", { fg = "#f38ba8" })
 vim.api.nvim_set_hl(0, "DiagnosticWarn", { fg = "#f9e2af" })
 vim.api.nvim_set_hl(0, "DiagnosticInfo", { fg = "#89b4fa" })
 vim.api.nvim_set_hl(0, "DiagnosticHint", { fg = "#a6e3a1" })
+
+local icons = require("config.icons")
+require("lualine").setup({
+	options = {
+		icons_enabled = true,
+		theme = "auto",
+		component_separators = { left = "", right = "" },
+		section_separators = { left = "", right = "" },
+		globalstatus = true,
+		refresh = {
+			statusline = 1000,
+		},
+	},
+	sections = {
+		lualine_a = {
+			{
+				"mode",
+				icon_only = true,
+				fmt = function(str)
+					local m = vim.api.nvim_get_mode().mode
+
+					local icons = {
+						n = "",
+						i = "",
+						v = "󰈈",
+						V = "󰈈",
+						["\22"] = "󰈈",
+						c = "",
+						R = "󰑖",
+						t = "",
+					}
+
+					local names = {
+						n = "NORMAL",
+						i = "INSERT",
+						v = "VISUAL",
+						V = "V-LINE",
+						["\22"] = "V-BLOCK",
+						c = "CMD",
+						R = "REPLACE",
+						t = "TERMINAL",
+					}
+
+					return (icons[m] or "") .. " " .. (names[m] or str)
+				end,
+			},
+		},
+
+		lualine_b = {
+			"branch",
+		},
+
+		lualine_c = {
+			"filename",
+			{
+				"diagnostics",
+				symbols = {
+					error = " ",
+					warn = " ",
+					info = " ",
+					hint = " ",
+				},
+			},
+		},
+
+		lualine_x = {
+			{
+				"diff",
+				symbols = {
+					added = icons.git.added,
+					modified = icons.git.modified,
+					removed = icons.git.removed,
+				},
+				source = function()
+					local gitsigns = vim.b.gitsigns_status_dict
+					if gitsigns then
+						return {
+							added = gitsigns.added,
+							modified = gitsigns.changed,
+							removed = gitsigns.removed,
+						}
+					end
+				end,
+			},
+			"fileformat",
+			{
+				"filetype",
+				icon_only = true,
+			},
+		},
+
+		lualine_y = { "progress" },
+		lualine_z = { "location" },
+	},
+})
