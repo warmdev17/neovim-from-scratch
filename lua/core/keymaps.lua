@@ -59,7 +59,7 @@ map("n", "<leader>fr", function()
 end, { desc = "Recent files" })
 
 map("n", "<leader>e", function()
-	require("oil").open_float()
+	require("oil").open()
 end, { desc = "Open Oil" })
 
 map({ "n", "t" }, "<C-t>", function()
