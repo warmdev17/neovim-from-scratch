@@ -13,4 +13,10 @@ vim.pack.add({
 	{ src = github .. "lewis6991/gitsigns.nvim" },
 	{ src = github .. "nvim-mini/mini.comment" },
 	{ src = github .. "nvim-mini/mini.pairs" },
+
+	-- lsp
+	{ src = github .. "nvim-treesitter/nvim-treesitter" },
+	{ src = github .. "neovim/nvim-lspconfig" },
+	{ src = github .. "mason-org/mason.nvim" },
+	{ src = github .. "mason-org/mason-lspconfig.nvim" },
 })
