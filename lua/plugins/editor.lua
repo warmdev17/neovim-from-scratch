@@ -124,3 +124,15 @@ require("kulala").setup({
 	global_keymaps_prefix = "<leader>r",
 	kulala_keymaps_prefix = "",
 })
+
+vim.g.db_ui_use_nerd_fonts = 1
+vim.g.db_ui_show_database_icon = 1
+vim.g.db_ui_save_location = vim.fn.stdpath("data") .. "/dadbod-ui"
+
+vim.g.db_ui_table_helpers = {
+	postgresql = {
+		Count = "select count(*) from {table}",
+		Explain = "explain analyze select * from {table}",
+		List = "select * from {table} limit 20",
+	},
+}

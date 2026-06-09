@@ -30,4 +30,9 @@ vim.pack.add({
 
 	-- rest http
 	{ src = github .. "mistweaverco/kulala.nvim" },
+
+	-- database
+	{ src = github .. "tpope/vim-dadbod" },
+	{ src = github .. "kristijanhusak/vim-dadbod-ui" },
+	{ src = github .. "kristijanhusak/vim-dadbod-completion" },
 })

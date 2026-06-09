@@ -89,22 +89,27 @@ map({ "n", "v" }, "<leader>lf", function()
 	})
 end, { desc = "Format file" })
 
-vim.keymap.set("n", "<leader>rr", function()
+map("n", "<leader>rr", function()
 	require("kulala").run()
 end, { desc = "Run request" })
 
-vim.keymap.set("n", "<leader>ra", function()
+map("n", "<leader>ra", function()
 	require("kulala").run_all()
 end, { desc = "Run all requests" })
 
-vim.keymap.set("n", "<leader>rb", function()
+map("n", "<leader>rb", function()
 	require("kulala").scratchpad()
 end, { desc = "Open request scratchpad" })
 
-vim.keymap.set("n", "<leader>re", function()
+map("n", "<leader>re", function()
 	require("kulala").set_selected_env()
 end, { desc = "Select request env" })
 
-vim.keymap.set("n", "<leader>ri", function()
+map("n", "<leader>ri", function()
 	require("kulala").inspect()
 end, { desc = "Inspect request" })
+
+map("n", "<leader>Du", "<cmd>DBUIToggle<cr>", { desc = "Toggle DB UI" })
+map("n", "<leader>Df", "<cmd>DBUIFindBuffer<cr>", { desc = "Find DB buffer" })
+map("n", "<leader>Dr", "<cmd>DBUIRenameBuffer<cr>", { desc = "Rename DB buffer" })
+map("n", "<leader>Dq", "<cmd>DBUILastQueryInfo<cr>", { desc = "Last DB query info" })
