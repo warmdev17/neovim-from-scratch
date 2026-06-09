@@ -19,4 +19,8 @@ vim.pack.add({
 	{ src = github .. "neovim/nvim-lspconfig" },
 	{ src = github .. "mason-org/mason.nvim" },
 	{ src = github .. "mason-org/mason-lspconfig.nvim" },
+
+	-- completion
+	{ src = github .. "saghen/blink.lib" },
+	{ src = github .. "saghen/blink.cmp" },
 })

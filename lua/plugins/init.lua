@@ -1,9 +1,9 @@
 local pluginModules = {
-	"editor",
-	"lsp",
-	"mason",
-	"treesitter",
 	"ui",
+	"editor",
+	"treesitter",
+	"mason",
+	"lsp",
 }
 
 for _, module in ipairs(pluginModules) do
