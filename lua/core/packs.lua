@@ -24,4 +24,7 @@ vim.pack.add({
 	{ src = github .. "saghen/blink.lib" },
 	{ src = github .. "saghen/blink.cmp" },
 	{ src = github .. "stevearc/conform.nvim" },
+
+	-- linter
+	{ src = github .. "mfussenegger/nvim-lint" },
 })
