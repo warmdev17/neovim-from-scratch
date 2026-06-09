@@ -81,3 +81,10 @@ end, { desc = "Git preview hunk" })
 map("n", "<leader>gr", function()
 	require("gitsigns").reset_hunk()
 end, { desc = "Git reset hunk" })
+
+map({ "n", "v" }, "<leader>lf", function()
+	require("conform").format({
+		async = true,
+		lsp_format = "fallback",
+	})
+end, { desc = "Format file" })
