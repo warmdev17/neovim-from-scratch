@@ -27,4 +27,7 @@ vim.pack.add({
 
 	-- linter
 	{ src = github .. "mfussenegger/nvim-lint" },
+
+	-- rest http
+	{ src = github .. "mistweaverco/kulala.nvim" },
 })

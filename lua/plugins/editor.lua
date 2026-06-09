@@ -118,3 +118,9 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
 		lint.try_lint()
 	end,
 })
+
+require("kulala").setup({
+	global_keymaps = false,
+	global_keymaps_prefix = "<leader>r",
+	kulala_keymaps_prefix = "",
+})

@@ -88,3 +88,23 @@ map({ "n", "v" }, "<leader>lf", function()
 		lsp_format = "fallback",
 	})
 end, { desc = "Format file" })
+
+vim.keymap.set("n", "<leader>rr", function()
+	require("kulala").run()
+end, { desc = "Run request" })
+
+vim.keymap.set("n", "<leader>ra", function()
+	require("kulala").run_all()
+end, { desc = "Run all requests" })
+
+vim.keymap.set("n", "<leader>rb", function()
+	require("kulala").scratchpad()
+end, { desc = "Open request scratchpad" })
+
+vim.keymap.set("n", "<leader>re", function()
+	require("kulala").set_selected_env()
+end, { desc = "Select request env" })
+
+vim.keymap.set("n", "<leader>ri", function()
+	require("kulala").inspect()
+end, { desc = "Inspect request" })
