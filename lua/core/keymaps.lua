@@ -62,12 +62,12 @@ map("n", "<leader>e", function()
 	require("oil").open_float()
 end, { desc = "Open Oil" })
 
-map("n", "<leader>tt", function()
+map({ "n", "t" }, "<C-t>", function()
 	Snacks.terminal()
-end, { desc = "Toggle terminal" })
+end, { desc = "Toggle float terminal" })
 
 map("n", "<leader>gg", function()
-	Snacks.lazygit()
+	Snacks.lazygit.open()
 end, { desc = "Open LazyGit" })
 
 map("n", "<leader>gb", function()

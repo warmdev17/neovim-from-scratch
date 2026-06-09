@@ -13,6 +13,12 @@ require("snacks").setup({
 	},
 	terminal = {
 		enabled = true,
+		win = {
+			position = "float",
+			border = "single",
+			width = 0.8,
+			height = 0.8,
+		},
 	},
 	lazygit = {
 		enabled = true,
