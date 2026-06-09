@@ -136,3 +136,21 @@ vim.g.db_ui_table_helpers = {
 		List = "select * from {table} limit 20",
 	},
 }
+
+require("ts_context_commentstring").setup({
+	enable_autocmd = false,
+})
+
+require("Comment").setup({
+	pre_hook = function(ctx)
+		return require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook()(ctx)
+	end,
+})
+
+require("nvim-ts-autotag").setup({
+	opts = {
+		enable_close = true,
+		enable_rename = true,
+		enable_close_on_slash = false,
+	},
+})

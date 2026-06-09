@@ -35,4 +35,9 @@ vim.pack.add({
 	{ src = github .. "tpope/vim-dadbod" },
 	{ src = github .. "kristijanhusak/vim-dadbod-ui" },
 	{ src = github .. "kristijanhusak/vim-dadbod-completion" },
+
+	-- comment
+	{ src = github .. "numToStr/Comment.nvim" },
+	{ src = github .. "JoosepAlviste/nvim-ts-context-commentstring" },
+	{ src = github .. "windwp/nvim-ts-autotag" },
 })
