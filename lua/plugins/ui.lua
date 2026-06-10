@@ -167,4 +167,12 @@ require("mini.icons").setup({
 
 require("mini.icons").mock_nvim_web_devicons()
 
-require("tiny-inline-diagnostic").setup()
+require("tiny-inline-diagnostic").setup({
+	preset = "modern",
+
+	options = {
+		show_source = true,
+		multilines = true,
+		multiple_diag_under_cursor = true,
+	},
+})
