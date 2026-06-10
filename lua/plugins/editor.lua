@@ -254,7 +254,7 @@ cmp.setup({
 			},
 			list = {
 				selection = {
-					preselect = false,
+					preselect = true,
 					auto_insert = false,
 				},
 			},
@@ -407,4 +407,12 @@ require("flash").setup({
 
 require("treesitter-context").setup({
 	max_lines = 3,
+})
+
+require("markview").setup({
+	preview = {
+		enable = true,
+		filetypes = { "markdown", "md", "rmd", "quarto" },
+		ignore_buftypes = {},
+	},
 })
