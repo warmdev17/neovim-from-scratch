@@ -174,8 +174,9 @@ require("tiny-inline-diagnostic").setup({
 
 	options = {
 		show_source = true,
-		multilines = true,
+		multilines = false,
 		multiple_diag_under_cursor = true,
+		use_icons_from_diagnostic = true,
 	},
 })
 
