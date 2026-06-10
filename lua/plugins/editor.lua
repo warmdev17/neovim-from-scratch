@@ -290,11 +290,7 @@ require("flash").setup({
 	labels = "asdfghjklqwertyuiopzxcvbnm",
 
 	search = {
-		multi_window = true,
-		forward = true,
-		wrap = true,
-		mode = "exact",
-		incremental = false,
+		enabled = false,
 	},
 
 	jump = {
