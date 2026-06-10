@@ -27,6 +27,7 @@ require("snacks").setup({
 
 require("oil").setup({
 	default_file_explorer = true,
+	watch_for_changes = true,
 	columns = {
 		"icon",
 	},
