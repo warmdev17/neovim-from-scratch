@@ -1,6 +1,49 @@
 require("snacks").setup({
 	picker = {
 		enabled = true,
+		layouts = {
+			default = {
+				layout = {
+					box = "horizontal",
+					width = 0.8,
+					min_width = 120,
+					height = 0.8,
+
+					{
+						box = "vertical",
+						border = "single",
+						title = "{title} {live} {flags}",
+						{ win = "input", height = 1, border = "bottom" },
+						{ win = "list", border = "none" },
+					},
+
+					{
+						win = "preview",
+						title = "{preview}",
+						border = "single",
+						width = 0.5,
+					},
+				},
+			},
+
+			vertical = {
+				layout = {
+					backdrop = false,
+					width = 0.5,
+					min_width = 80,
+					height = 0.8,
+					min_height = 30,
+					box = "vertical",
+					border = "single",
+					title = "{title} {live} {flags}",
+					title_pos = "center",
+
+					{ win = "input", height = 1, border = "bottom" },
+					{ win = "list", border = "none" },
+					{ win = "preview", title = "{preview}", height = 0.4, border = "top" },
+				},
+			},
+		},
 	},
 	explorer = {
 		enabled = false,
@@ -22,6 +65,11 @@ require("snacks").setup({
 	},
 	lazygit = {
 		enabled = true,
+		win = {
+			border = "single",
+			width = 0.85,
+			height = 0.85,
+		},
 	},
 	statuscolumn = {
 		enabled = true,
