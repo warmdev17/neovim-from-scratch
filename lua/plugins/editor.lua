@@ -177,7 +177,7 @@ cmp.setup({
 		keymap = {
 			["<Tab>"] = { "accept", "fallback" },
 			["<S-Tab>"] = { "fallback" },
-			["<CR>"] = { "select_and_accept", "fallback" },
+			["<CR>"] = { "fallback" },
 
 			["<C-n>"] = { "select_next", "fallback" },
 			["<C-p>"] = { "select_prev", "fallback" },
@@ -187,6 +187,12 @@ cmp.setup({
 		completion = {
 			menu = {
 				auto_show = true,
+			},
+			list = {
+				selection = {
+					preselect = false,
+					auto_insert = false,
+				},
 			},
 		},
 	},
