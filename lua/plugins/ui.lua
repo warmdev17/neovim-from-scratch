@@ -142,7 +142,7 @@ require("vim._core.ui2").enable()
 require("bufferline").setup({
 	options = {
 		always_show_bufferline = false,
-		separator_style = "slant", -- "slant", "slope", "thin"
+		separator_style = "slope", -- "slant", "slope", "thin"
 		show_buffer_close_icons = false,
 		show_close_icon = false,
 		diagnostics = "nvim_lsp",
