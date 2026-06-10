@@ -74,6 +74,14 @@ map("n", "<leader>gg", function()
 	Snacks.lazygit.open()
 end, { desc = "Open LazyGit" })
 
+map("n", "<leader>cd", function()
+	Snacks.picker.diagnostics()
+end, { desc = "Workspace Diagnostics" })
+
+map("n", "<leader>cD", function()
+	Snacks.picker.diagnostics_buffer()
+end, { desc = "Buffer Diagnostics" })
+
 map("n", "<leader>gb", function()
 	require("gitsigns").blame_line()
 end, { desc = "Git blame line" })
@@ -117,3 +125,10 @@ map("n", "<leader>Du", "<cmd>DBUIToggle<cr>", { desc = "Toggle DB UI" })
 map("n", "<leader>Df", "<cmd>DBUIFindBuffer<cr>", { desc = "Find DB buffer" })
 map("n", "<leader>Dr", "<cmd>DBUIRenameBuffer<cr>", { desc = "Rename DB buffer" })
 map("n", "<leader>Dq", "<cmd>DBUILastQueryInfo<cr>", { desc = "Last DB query info" })
+
+map("n", "<leader>rn", function()
+	return ":IncRename " .. vim.fn.expand("<cword>")
+end, {
+	expr = true,
+	desc = "Rename",
+})
