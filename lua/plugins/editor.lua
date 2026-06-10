@@ -224,8 +224,8 @@ cmp.setup({
 
 		["<C-e>"] = { "cancel", "fallback" },
 
-		["<A-l>"] = { "snippet_forward" },
-		["<A-h>"] = { "snippet_backward" },
+		["<A-n>"] = { "snippet_forward" },
+		["<A-p>"] = { "snippet_backward" },
 	},
 
 	sources = {

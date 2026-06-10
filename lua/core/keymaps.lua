@@ -18,6 +18,20 @@ map({ "n", "v", "o" }, "L", "$", opts)
 map({ "n", "v" }, "<C-d>", "<C-d>zz", opts)
 map({ "n", "v" }, "<C-u>", "<C-u>zz", opts)
 
+-- Move line up/down
+map("n", "<A-j>", "<cmd>move .+1<cr>==", { desc = "Move Line Down" })
+map("n", "<A-k>", "<cmd>move .-2<cr>==", { desc = "Move Line Up" })
+
+map("v", "<A-j>", ":move '>+1<cr>gv=gv", { desc = "Move Selection Down" })
+map("v", "<A-k>", ":move '<-2<cr>gv=gv", { desc = "Move Selection Up" })
+
+-- Indent line/selection
+map("n", "<A-h>", "<<", { desc = "Indent Line Left" })
+map("n", "<A-l>", ">>", { desc = "Indent Line Right" })
+
+map("v", "<A-h>", "<gv", { desc = "Indent Selection Left" })
+map("v", "<A-l>", ">gv", { desc = "Indent Selection Right" })
+
 -- pane movement
 map({ "n", "v" }, "<C-h>", "<C-w>h", opts)
 map({ "n", "v" }, "<C-j>", "<C-w>j", opts)
