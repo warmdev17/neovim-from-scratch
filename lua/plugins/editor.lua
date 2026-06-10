@@ -217,10 +217,16 @@ require("conform").setup({
 		yaml = { "prettier" },
 	},
 
-	format_on_save = {
-		timeout_ms = 500,
-		lsp_format = "fallback",
-	},
+	format_on_save = function(bufnr)
+		if vim.g.disableAutoformat or vim.b[bufnr].disableAutoformat then
+			return
+		end
+
+		return {
+			timeout_ms = 500,
+			lsp_format = "fallback",
+		}
+	end,
 })
 
 local lint = require("lint")

@@ -107,6 +107,28 @@ map({ "n", "v" }, "<leader>lf", function()
 	})
 end, { desc = "Format file" })
 
+-- disable format on save
+map("n", "<leader>uf", function()
+	vim.g.disableAutoformat = not vim.g.disableAutoformat
+
+	if vim.g.disableAutoformat then
+		vim.notify("Format on save disabled")
+	else
+		vim.notify("Format on save enabled")
+	end
+end, { desc = "Toggle format on save" })
+
+-- disable buffer format on save
+map("n", "<leader>uF", function()
+	vim.b.disableAutoformat = not vim.b.disableAutoformat
+
+	if vim.b.disableAutoformat then
+		vim.notify("Format on save disabled for this buffer")
+	else
+		vim.notify("Format on save enabled for this buffer")
+	end
+end, { desc = "Toggle format on save buffer" })
+
 map("n", "<leader>rr", function()
 	require("kulala").run()
 end, { desc = "Run request" })
