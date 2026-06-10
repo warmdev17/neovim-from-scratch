@@ -37,11 +37,11 @@ map("n", "sv", ":vsplit<cr>", opts)
 
 -- diagnostic
 map("n", "]d", function()
-	vim.diagnostic.jump({ count = 1, float = true })
+	vim.diagnostic.jump({ count = 1, float = false })
 end, { desc = "Next diagnostic" })
 
 map("n", "[d", function()
-	vim.diagnostic.jump({ count = -1, float = true })
+	vim.diagnostic.jump({ count = -1, float = false })
 end, { desc = "Previous diagnostic" })
 
 map("n", "<leader>d", "dd", { desc = "Delete line" })
