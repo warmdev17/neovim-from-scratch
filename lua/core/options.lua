@@ -10,7 +10,9 @@ opt.showmode = false
 
 opt.clipboard = "unnamedplus"
 
-opt.wrap = false
+opt.wrap = true
+opt.linebreak = true
+opt.breakindent = true
 opt.scrolloff = 10
 opt.sidescrolloff = 10
 
