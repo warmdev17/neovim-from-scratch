@@ -173,7 +173,7 @@ require("tiny-inline-diagnostic").setup({
 	preset = "modern",
 
 	options = {
-		show_source = true,
+		show_source = false,
 		multilines = false,
 		multiple_diag_under_cursor = true,
 		use_icons_from_diagnostic = true,
