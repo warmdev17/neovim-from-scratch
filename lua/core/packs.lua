@@ -43,4 +43,8 @@ vim.pack.add({
 
 	-- tiny diagnostic
 	{ src = github .. "rachartier/tiny-inline-diagnostic.nvim" },
+
+	-- snippet
+	{ src = github .. "L3MON4D3/LuaSnip" },
+	{ src = github .. "rafamadriz/friendly-snippets" },
 })

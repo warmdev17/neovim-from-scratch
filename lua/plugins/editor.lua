@@ -57,27 +57,25 @@ local cmp = require("blink.cmp")
 cmp.build():pwait()
 cmp.setup({
 	keymap = {
-		preset = "none",
-
-		["<C-Space>"] = { "show", "show_documentation", "hide_documentation" },
-
+		["<Tab>"] = { "accept", "fallback" },
+		["<S-Tab>"] = { "fallback" },
 		["<CR>"] = { "accept", "fallback" },
 
-		["<C-e>"] = { "hide" },
+		["<C-n>"] = { "select_next", "fallback" },
+		["<C-p>"] = { "select_prev", "fallback" },
 
-		["<C-n>"] = { "snippet_forward" },
-		["<C-p>"] = { "snippet_backward" },
+		["<C-e>"] = { "cancel", "fallback" },
 
-		["<C-b>"] = { "scroll_documentation_up" },
-		["<C-f>"] = { "scroll_documentation_down" },
-
-		["<Tab>"] = { "select_next", "fallback" },
-
-		["<S-Tab>"] = { "select_prev", "fallback" },
+		["<A-l>"] = { "snippet_forward" },
+		["<A-h>"] = { "snippet_backward" },
 	},
 
 	sources = {
 		default = { "lsp", "path", "snippets", "buffer" },
+	},
+
+	snippets = {
+		preset = "luasnip",
 	},
 })
 
