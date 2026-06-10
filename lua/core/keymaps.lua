@@ -30,9 +30,13 @@ map("n", "ss", ":split<cr>", opts)
 map("n", "sv", ":vsplit<cr>", opts)
 
 -- diagnostic
-map("n", "<c-d>", function()
-	vim.diagnostic.jump({ count = 1 })
-end, opts)
+map("n", "]d", function()
+	vim.diagnostic.jump({ count = 1, float = true })
+end, { desc = "Next diagnostic" })
+
+map("n", "[d", function()
+	vim.diagnostic.jump({ count = -1, float = true })
+end, { desc = "Previous diagnostic" })
 
 map("n", "<leader>d", "dd", { desc = "Delete line" })
 map({ "n", "v" }, "<c-a>", "ggVG", opts) -- select all
