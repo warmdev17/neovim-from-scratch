@@ -68,6 +68,18 @@ vim.lsp.config("yamlls", {
 	},
 })
 
+vim.lsp.config("lua_ls", {
+	capabilities = capabilities,
+	settings = {
+		Lua = {
+			hint = {
+				enable = true,
+				arrayIndex = "Disable",
+			},
+		},
+	},
+})
+
 vim.lsp.enable({
 	"gopls",
 	"vtsls",
