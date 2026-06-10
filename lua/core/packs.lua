@@ -48,4 +48,10 @@ vim.pack.add({
 	-- snippet
 	{ src = github .. "L3MON4D3/LuaSnip" },
 	{ src = github .. "rafamadriz/friendly-snippets" },
+
+	-- inc-rename
+	{ src = github .. "smjonas/inc-rename.nvim" },
+
+	-- which key
+	{ src = github .. "folke/which-key.nvim" },
 })

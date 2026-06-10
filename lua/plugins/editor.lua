@@ -103,6 +103,16 @@ require("snacks").setup({
 				}, ","),
 			},
 		},
+		input = {
+			border = "single",
+			relative = "cursor",
+			row = -3,
+			col = 0,
+			width = function()
+				local word = vim.fn.expand("<cword>")
+				return math.max(20, math.min(60, #word + 10))
+			end,
+		},
 	},
 })
 
@@ -143,7 +153,7 @@ cmp.setup({
 	keymap = {
 		["<Tab>"] = { "accept", "fallback" },
 		["<S-Tab>"] = { "fallback" },
-		["<CR>"] = { "accept", "fallback" },
+		["<CR>"] = { "select_and_accept", "fallback" },
 
 		["<C-n>"] = { "select_next", "fallback" },
 		["<C-p>"] = { "select_prev", "fallback" },
@@ -165,7 +175,14 @@ cmp.setup({
 	cmdline = {
 		enabled = true,
 		keymap = {
-			preset = "inherit",
+			["<Tab>"] = { "accept", "fallback" },
+			["<S-Tab>"] = { "fallback" },
+			["<CR>"] = { "select_and_accept", "fallback" },
+
+			["<C-n>"] = { "select_next", "fallback" },
+			["<C-p>"] = { "select_prev", "fallback" },
+
+			["<C-e>"] = { "cancel", "fallback" },
 		},
 		completion = {
 			menu = {
@@ -251,4 +268,8 @@ require("nvim-ts-autotag").setup({
 		enable_rename = true,
 		enable_close_on_slash = false,
 	},
+})
+
+require("inc_rename").setup({
+	input_buffer_type = "snacks",
 })

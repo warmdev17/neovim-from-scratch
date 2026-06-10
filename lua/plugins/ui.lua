@@ -178,3 +178,15 @@ require("tiny-inline-diagnostic").setup({
 		multiple_diag_under_cursor = true,
 	},
 })
+
+local wk = require("which-key")
+
+wk.add({
+	{ "<leader>f", group = "find" },
+	{ "<leader>g", group = "git" },
+	{ "<leader>c", group = "code" },
+	{ "<leader>l", group = "lint/format" },
+	{ "<leader>r", group = "rest" },
+	{ "<leader>d", group = "debug/database" },
+	{ "<leader>t", group = "terminal/test" },
+})
