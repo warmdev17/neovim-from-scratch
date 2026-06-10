@@ -23,6 +23,16 @@ require("snacks").setup({
 	lazygit = {
 		enabled = true,
 	},
+	statuscolumn = {
+		enabled = true,
+	},
+
+	left = { "sign" },
+	right = { "git" },
+	folds = {
+		open = true,
+		git_hl = true,
+	},
 })
 
 require("oil").setup({

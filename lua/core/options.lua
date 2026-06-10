@@ -2,7 +2,6 @@ local opt = vim.opt
 
 opt.number = true
 opt.relativenumber = true
-opt.statuscolumn = " %=%{v:relnum?v:relnum:v:lnum} %s"
 opt.signcolumn = "yes"
 
 opt.fillchars:append({ eob = " " })
