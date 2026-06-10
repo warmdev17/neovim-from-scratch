@@ -19,7 +19,25 @@ vim.lsp.config("gopls", {
 	},
 })
 
-vim.lsp.enable("gopls")
+vim.lsp.config("vtsls", {
+	capabilities = capabilities,
+	filetypes = {
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+	},
+})
+
+vim.lsp.enable({
+	"gopls",
+	"vtsls",
+	"lua_ls",
+	"html",
+	"cssls",
+	"jsonls",
+	"tailwindcss",
+})
 
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(args)

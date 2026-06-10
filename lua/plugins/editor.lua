@@ -75,6 +75,10 @@ cmp.setup({
 
 		["<S-Tab>"] = { "select_prev", "fallback" },
 	},
+
+	sources = {
+		default = { "lsp", "path", "snippets", "buffer" },
+	},
 })
 
 require("conform").setup({
