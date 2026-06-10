@@ -4,6 +4,10 @@ local opts = { noremap = true, silent = true }
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+vim.g.tmux_navigator_no_mappings = 1
+vim.g.tmux_navigator_disable_when_zoomed = 1
+vim.g.tmux_navigator_save_on_switch = 2
+
 -- movement
 map({ "n", "v" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 map({ "n", "v" }, "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
@@ -174,3 +178,51 @@ end, {
 	expr = true,
 	desc = "Rename",
 })
+
+local tmuxNavigatorOpts = { silent = true }
+
+-- tmux navigator
+map(
+	"n",
+	"<C-h>",
+	"<cmd>TmuxNavigateLeft<cr>",
+	vim.tbl_extend("force", tmuxNavigatorOpts, {
+		desc = "Navigate Left",
+	})
+)
+
+map(
+	"n",
+	"<C-j>",
+	"<cmd>TmuxNavigateDown<cr>",
+	vim.tbl_extend("force", tmuxNavigatorOpts, {
+		desc = "Navigate Down",
+	})
+)
+
+map(
+	"n",
+	"<C-k>",
+	"<cmd>TmuxNavigateUp<cr>",
+	vim.tbl_extend("force", tmuxNavigatorOpts, {
+		desc = "Navigate Up",
+	})
+)
+
+map(
+	"n",
+	"<C-l>",
+	"<cmd>TmuxNavigateRight<cr>",
+	vim.tbl_extend("force", tmuxNavigatorOpts, {
+		desc = "Navigate Right",
+	})
+)
+
+map(
+	"n",
+	"<C-\\>",
+	"<cmd>TmuxNavigatePrevious<cr>",
+	vim.tbl_extend("force", tmuxNavigatorOpts, {
+		desc = "Navigate Previous",
+	})
+)

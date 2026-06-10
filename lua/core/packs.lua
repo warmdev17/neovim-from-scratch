@@ -54,4 +54,7 @@ vim.pack.add({
 
 	-- which key
 	{ src = github .. "folke/which-key.nvim" },
+
+	-- tmux navigator
+	{ src = github .. "christoomey/vim-tmux-navigator" },
 })
