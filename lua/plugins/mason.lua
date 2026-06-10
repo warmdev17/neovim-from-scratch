@@ -8,6 +8,7 @@ require("mason-lspconfig").setup({
 		"html",
 		"cssls",
 		"jsonls",
+		"yamlls",
 		"tailwindcss",
 		"stylua",
 	},

@@ -40,6 +40,34 @@ vim.lsp.config("vtsls", {
 	},
 })
 
+vim.lsp.config("jsonls", {
+	capabilities = capabilities,
+	settings = {
+		json = {
+			schemas = require("schemastore").json.schemas(),
+			validate = {
+				enable = true,
+			},
+		},
+	},
+})
+
+vim.lsp.config("yamlls", {
+	capabilities = capabilities,
+	settings = {
+		yaml = {
+			schemaStore = {
+				enable = false,
+				url = "",
+			},
+			schemas = require("schemastore").yaml.schemas(),
+			validate = true,
+			completion = true,
+			hover = true,
+		},
+	},
+})
+
 vim.lsp.enable({
 	"gopls",
 	"vtsls",
@@ -47,6 +75,7 @@ vim.lsp.enable({
 	"html",
 	"cssls",
 	"jsonls",
+	"yamlls",
 	"tailwindcss",
 })
 

@@ -13,8 +13,8 @@ vim.pack.add({
 	{ src = github .. "malewicz1337/oil-git.nvim" },
 	{ src = github .. "lewis6991/gitsigns.nvim" },
 	{ src = github .. "nvim-mini/mini.comment" },
-	{ src = github .. "nvim-mini/mini.pairs" },
 	{ src = github .. "folke/flash.nvim" },
+	{ src = github .. "nvim-mini/mini.pairs" },
 	{ src = github .. "christoomey/vim-tmux-navigator" },
 
 	-- lsp
@@ -22,6 +22,7 @@ vim.pack.add({
 	{ src = github .. "neovim/nvim-lspconfig" },
 	{ src = github .. "mason-org/mason.nvim" },
 	{ src = github .. "mason-org/mason-lspconfig.nvim" },
+	{ src = github .. "b0o/SchemaStore.nvim" },
 
 	-- completion
 	{ src = github .. "saghen/blink.lib" },
