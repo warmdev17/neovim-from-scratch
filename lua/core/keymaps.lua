@@ -126,6 +126,46 @@ map("n", "<leader>Df", "<cmd>DBUIFindBuffer<cr>", { desc = "Find DB buffer" })
 map("n", "<leader>Dr", "<cmd>DBUIRenameBuffer<cr>", { desc = "Rename DB buffer" })
 map("n", "<leader>Dq", "<cmd>DBUILastQueryInfo<cr>", { desc = "Last DB query info" })
 
+local incRenamePrefix = "IncRename "
+
+local function isIncRenameCmdline()
+	local cmdType = vim.fn.getcmdtype()
+	local cmdLine = vim.fn.getcmdline()
+
+	return cmdType == ":" and vim.startswith(cmdLine, incRenamePrefix)
+end
+
+local function isAtIncRenamePrefix()
+	local cmdLine = vim.fn.getcmdline()
+	local cmdPos = vim.fn.getcmdpos()
+
+	return isIncRenameCmdline() and #cmdLine <= #incRenamePrefix and cmdPos <= #incRenamePrefix + 1
+end
+
+map("c", "<BS>", function()
+	if isAtIncRenamePrefix() then
+		return ""
+	end
+
+	return "<BS>"
+end, { expr = true, desc = "Protected backspace for IncRename" })
+
+map("c", "<C-w>", function()
+	if isAtIncRenamePrefix() then
+		return ""
+	end
+
+	return "<C-w>"
+end, { expr = true, desc = "Protected delete word for IncRename" })
+
+map("c", "<C-u>", function()
+	if isIncRenameCmdline() then
+		return incRenamePrefix
+	end
+
+	return "<C-u>"
+end, { expr = true, desc = "Protected clear line for IncRename" })
+
 map("n", "<leader>rn", function()
 	return ":IncRename " .. vim.fn.expand("<cword>")
 end, {
