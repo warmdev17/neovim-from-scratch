@@ -47,8 +47,8 @@ require("lualine").setup({
 	options = {
 		icons_enabled = true,
 		theme = "auto",
-		component_separators = { left = "", right = "" },
-		section_separators = { left = "", right = "" },
+		component_separators = { left = "│", right = "│" },
+		section_separators = { left = "", right = "" },
 		globalstatus = true,
 		refresh = {
 			statusline = 1000,
@@ -58,20 +58,8 @@ require("lualine").setup({
 		lualine_a = {
 			{
 				"mode",
-				icon_only = true,
 				fmt = function(str)
 					local m = vim.api.nvim_get_mode().mode
-
-					local icons = {
-						n = "",
-						i = "",
-						v = "󰈈",
-						V = "󰈈",
-						["\22"] = "󰈈",
-						c = "",
-						R = "󰑖",
-						t = "",
-					}
 
 					local names = {
 						n = "N",
@@ -84,7 +72,7 @@ require("lualine").setup({
 						t = "T",
 					}
 
-					return (icons[m] or "") .. " " .. (names[m] or str)
+					return names[m] or str
 				end,
 			},
 		},
