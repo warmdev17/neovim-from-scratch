@@ -11,6 +11,8 @@ map({ "n", "v" }, "J", "5j", opts)
 map({ "n", "v" }, "K", "5k", opts)
 map({ "n", "v", "o" }, "H", "^", opts)
 map({ "n", "v", "o" }, "L", "$", opts)
+map({ "n", "v" }, "<C-d>", "<C-d>zz", opts)
+map({ "n", "v" }, "<C-u>", "<C-u>zz", opts)
 
 -- pane movement
 map({ "n", "v" }, "<C-h>", "<C-w>h", opts)
