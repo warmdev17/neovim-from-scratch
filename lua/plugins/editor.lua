@@ -161,6 +161,18 @@ cmp.setup({
 	snippets = {
 		preset = "luasnip",
 	},
+
+	cmdline = {
+		enabled = true,
+		keymap = {
+			preset = "inherit",
+		},
+		completion = {
+			menu = {
+				auto_show = true,
+			},
+		},
+	},
 })
 
 require("conform").setup({
