@@ -73,13 +73,36 @@ require("snacks").setup({
 	},
 	statuscolumn = {
 		enabled = true,
+		left = { "sign" },
+		right = { "git" },
+		folds = {
+			open = true,
+			git_hl = true,
+		},
 	},
 
-	left = { "sign" },
-	right = { "git" },
-	folds = {
-		open = true,
-		git_hl = true,
+	styles = {
+		terminal = {
+			border = "single",
+			wo = {
+				winhighlight = table.concat({
+					"Normal:NormalFloat",
+					"NormalNC:NormalFloat",
+					"FloatBorder:FloatBorder",
+				}, ","),
+			},
+		},
+
+		lazygit = {
+			border = "single",
+			wo = {
+				winhighlight = table.concat({
+					"Normal:NormalFloat",
+					"NormalNC:NormalFloat",
+					"FloatBorder:FloatBorder",
+				}, ","),
+			},
+		},
 	},
 })
 
