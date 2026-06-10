@@ -166,3 +166,5 @@ require("mini.icons").setup({
 })
 
 require("mini.icons").mock_nvim_web_devicons()
+
+require("tiny-inline-diagnostic").setup()

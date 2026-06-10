@@ -40,4 +40,7 @@ vim.pack.add({
 	{ src = github .. "numToStr/Comment.nvim" },
 	{ src = github .. "JoosepAlviste/nvim-ts-context-commentstring" },
 	{ src = github .. "windwp/nvim-ts-autotag" },
+
+	-- tiny diagnostic
+	{ src = github .. "rachartier/tiny-inline-diagnostic.nvim" },
 })

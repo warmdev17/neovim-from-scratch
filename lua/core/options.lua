@@ -72,3 +72,7 @@ opt.diffopt:append({
 })
 
 opt.virtualedit = "block"
+
+vim.diagnostic.config({
+	virtual_text = false,
+})
