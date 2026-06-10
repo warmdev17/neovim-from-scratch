@@ -72,9 +72,18 @@ vim.lsp.config("lua_ls", {
 	capabilities = capabilities,
 	settings = {
 		Lua = {
+			semantic = {
+				enable = true,
+			},
 			hint = {
 				enable = true,
 				arrayIndex = "Disable",
+			},
+			diagnostics = {
+				globals = { "vim", "Snacks" },
+			},
+			workspace = {
+				checkThirdParty = false,
 			},
 		},
 	},
