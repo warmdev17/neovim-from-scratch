@@ -39,6 +39,8 @@ require("oil").setup({
 	},
 })
 
+require("oil-git").setup()
+
 require("gitsigns").setup({
 	signs = {
 		add = { text = "▎" },

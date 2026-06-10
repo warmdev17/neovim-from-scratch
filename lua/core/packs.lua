@@ -10,6 +10,7 @@ vim.pack.add({
 	-- editor
 	{ src = github .. "folke/snacks.nvim" },
 	{ src = github .. "stevearc/oil.nvim" },
+	{ src = github .. "malewicz1337/oil-git.nvim" },
 	{ src = github .. "lewis6991/gitsigns.nvim" },
 	{ src = github .. "nvim-mini/mini.comment" },
 	{ src = github .. "nvim-mini/mini.pairs" },
