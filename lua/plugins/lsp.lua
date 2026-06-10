@@ -12,6 +12,17 @@ vim.lsp.config("gopls", {
 			semanticTokens = true,
 			gofumpt = true,
 			staticcheck = true,
+
+			hints = {
+				assignVariableTypes = true,
+				compositeLiteralFields = true,
+				compositeLiteralTypes = false,
+				constantValues = true,
+				functionTypeParameters = true,
+				parameterNames = true,
+				rangeVariableTypes = true,
+			},
+
 			analyses = {
 				unusedparams = true,
 			},
