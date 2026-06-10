@@ -74,14 +74,14 @@ require("lualine").setup({
 					}
 
 					local names = {
-						n = "NORMAL",
-						i = "INSERT",
-						v = "VISUAL",
-						V = "V-LINE",
-						["\22"] = "V-BLOCK",
-						c = "CMD",
-						R = "REPLACE",
-						t = "TERMINAL",
+						n = "N",
+						i = "I",
+						v = "V",
+						V = "V-L",
+						["\22"] = "V-B",
+						c = "C",
+						R = "R",
+						t = "T",
 					}
 
 					return (icons[m] or "") .. " " .. (names[m] or str)
