@@ -14,6 +14,8 @@ vim.pack.add({
 	{ src = github .. "lewis6991/gitsigns.nvim" },
 	{ src = github .. "nvim-mini/mini.comment" },
 	{ src = github .. "nvim-mini/mini.pairs" },
+	{ src = github .. "folke/flash.nvim" },
+	{ src = github .. "christoomey/vim-tmux-navigator" },
 
 	-- lsp
 	{ src = github .. "nvim-treesitter/nvim-treesitter" },
@@ -54,7 +56,4 @@ vim.pack.add({
 
 	-- which key
 	{ src = github .. "folke/which-key.nvim" },
-
-	-- tmux navigator
-	{ src = github .. "christoomey/vim-tmux-navigator" },
 })
