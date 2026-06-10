@@ -27,3 +27,23 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end
 	end,
 })
+
+vim.api.nvim_create_autocmd("BufReadPost", {
+	desc = "Restore cursor position",
+	callback = function(event)
+		local exclude = { "gitcommit" }
+		local buf = event.buf
+		local filetype = vim.bo[buf].filetype
+
+		if vim.tbl_contains(exclude, filetype) then
+			return
+		end
+
+		local mark = vim.api.nvim_buf_get_mark(buf, '"')
+		local lineCount = vim.api.nvim_buf_line_count(buf)
+
+		if mark[1] > 0 and mark[1] <= lineCount then
+			pcall(vim.api.nvim_win_set_cursor, 0, mark)
+		end
+	end,
+})
