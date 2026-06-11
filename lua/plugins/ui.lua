@@ -226,3 +226,5 @@ require("nvim-highlight-colors").setup({
 		"dbui",
 	},
 })
+
+require("colorful-menu").setup({})

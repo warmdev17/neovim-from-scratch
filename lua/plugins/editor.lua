@@ -245,6 +245,14 @@ cmp.setup({
 		menu = {
 			draw = {
 				components = {
+					label = {
+						text = function(ctx)
+							return require("colorful-menu").blink_components_text(ctx)
+						end,
+						highlight = function(ctx)
+							return require("colorful-menu").blink_components_highlight(ctx)
+						end,
+					},
 					kind_icon = {
 						text = function(ctx)
 							local icon = ctx.kind_icon

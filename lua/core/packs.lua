@@ -7,6 +7,7 @@ vim.pack.add({
 	{ src = github .. "nvim-tree/nvim-web-devicons" },
 	{ src = github .. "echasnovski/mini.icons" },
 	{ src = github .. "brenoprata10/nvim-highlight-colors" },
+	{ src = github .. "xzbdmw/colorful-menu.nvim" },
 
 	-- editor
 	{ src = github .. "folke/snacks.nvim" },
