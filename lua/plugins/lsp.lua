@@ -89,6 +89,29 @@ vim.lsp.config("lua_ls", {
 	},
 })
 
+vim.lsp.config("pyright", {
+	capabilities = capabilities,
+	settings = {
+		python = {
+			analysis = {
+				typeCheckingMode = "basic",
+				autoSearchPaths = true,
+				useLibraryCodeForTypes = true,
+				diagnosticMode = "workspace",
+			},
+		},
+	},
+})
+
+vim.lsp.config("ruff", {
+	capabilities = capabilities,
+	init_options = {
+		settings = {
+			lineLength = 100,
+		},
+	},
+})
+
 vim.lsp.enable({
 	"gopls",
 	"vtsls",
@@ -98,6 +121,8 @@ vim.lsp.enable({
 	"jsonls",
 	"yamlls",
 	"tailwindcss",
+	"pyright",
+	"ruff",
 })
 
 vim.api.nvim_create_autocmd("LspAttach", {

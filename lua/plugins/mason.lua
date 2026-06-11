@@ -11,6 +11,9 @@ require("mason-lspconfig").setup({
 		"yamlls",
 		"tailwindcss",
 		"stylua",
+		"pyright",
+		"ruff",
+		"black",
 	},
 
 	automatic_enable = false,

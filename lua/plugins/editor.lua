@@ -326,6 +326,8 @@ require("conform").setup({
 		scss = { "prettier" },
 		markdown = { "prettier" },
 		yaml = { "prettier" },
+
+		python = { "black" },
 	},
 
 	format_on_save = function(bufnr)
@@ -349,6 +351,8 @@ lint.linters_by_ft = {
 	javascriptreact = { "eslint_d" },
 	typescript = { "eslint_d" },
 	typescriptreact = { "eslint_d" },
+
+	python = { "ruff" },
 }
 
 vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
