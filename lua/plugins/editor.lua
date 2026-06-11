@@ -310,24 +310,36 @@ cmp.setup({
 })
 
 require("conform").setup({
+	formatters = {
+		kulala = {
+			command = "kulala-fmt",
+			args = { "format", "$FILENAME" },
+			stdin = false,
+		},
+	},
 	formatters_by_ft = {
 		lua = { "stylua" },
 
 		go = { "goimports", "gofmt" },
 
-		javascript = { "prettier" },
-		javascriptreact = { "prettier" },
-		typescript = { "prettier" },
-		typescriptreact = { "prettier" },
+		javascript = { "prettierd" },
+		javascriptreact = { "prettierd" },
+		typescript = { "prettierd" },
+		typescriptreact = { "prettierd" },
 
-		json = { "prettier" },
-		html = { "prettier" },
-		css = { "prettier" },
-		scss = { "prettier" },
-		markdown = { "prettier" },
-		yaml = { "prettier" },
+		json = { "prettierd" },
+		html = { "prettierd" },
+		css = { "prettierd" },
+		scss = { "prettierd" },
+		markdown = { "prettierd" },
+		yaml = { "prettierd" },
 
 		python = { "black" },
+
+		http = { "kulala" },
+		rest = { "kulala" },
+
+		sql = { "pg_format" },
 	},
 
 	format_on_save = function(bufnr)
