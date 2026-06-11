@@ -92,6 +92,10 @@
       "rev": "30cf2f01c4aaa2033db67376b9924fa2442c05d6",
       "src": "https://github.com/nvim-mini/mini.pairs"
     },
+    "mini.surround": {
+      "rev": "9fd5ebef2b34cc4ac3c0f1811a6726ea6d92fa91",
+      "src": "https://github.com/nvim-mini/mini.surround"
+    },
     "nvim-highlight-colors": {
       "rev": "e4c7af0211866162d999ce0bdd6a029302e19139",
       "src": "https://github.com/brenoprata10/nvim-highlight-colors"

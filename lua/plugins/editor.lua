@@ -515,3 +515,15 @@ require("markview").setup({
 		ignore_buftypes = {},
 	},
 })
+
+require("mini.surround").setup({
+	mappings = {
+		add = "gsa", -- add surrounding
+		delete = "gsd", -- delete surrounding
+		find = "gsf", -- find surrounding right
+		find_left = "gsF", -- find surrounding left
+		highlight = "gsh", -- highlight surrounding
+		replace = "gsr", -- replace surrounding
+		update_n_lines = "gsn", -- update search lines
+	},
+})

@@ -20,6 +20,7 @@ vim.pack.add({
 	{ src = github .. "christoomey/vim-tmux-navigator" },
 	{ src = github .. "nvim-treesitter/nvim-treesitter-context" },
 	{ src = github .. "OXY2DEV/markview.nvim" },
+	{ src = github .. "nvim-mini/mini.surround" },
 
 	-- lsp
 	{ src = github .. "nvim-treesitter/nvim-treesitter" },
