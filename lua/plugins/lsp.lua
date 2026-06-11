@@ -89,7 +89,7 @@ vim.lsp.config("lua_ls", {
 				arrayIndex = "Disable",
 			},
 			semantic = {
-				enable = true,
+				enable = false,
 			},
 		},
 	},

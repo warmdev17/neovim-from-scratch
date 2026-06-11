@@ -329,7 +329,7 @@ cmp.setup({
 		keymap = {
 			preset = "cmdline",
 			["<Tab>"] = { "accept" },
-			["<CR>"] = { "accept_and_enter" },
+			["<CR>"] = { "accept_and_enter", "fallback" },
 			["<Right>"] = false,
 			["<Left>"] = false,
 		},
