@@ -286,3 +286,7 @@ end, { desc = "Treesitter Search" })
 map("c", "<C-s>", function()
 	require("flash").toggle()
 end, { desc = "Toggle Flash Search" })
+
+map("v", "<leader>sc", ":Silicon<CR>", {
+	desc = "Capture code as image",
+})

@@ -67,4 +67,7 @@ vim.pack.add({
 
 	-- nvim dev
 	{ src = github .. "folke/lazydev.nvim" },
+
+	-- code screenshot
+	{ src = github .. "michaelrommel/nvim-silicon" },
 })
