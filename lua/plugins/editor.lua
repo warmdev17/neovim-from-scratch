@@ -215,25 +215,72 @@ local cmp = require("blink.cmp")
 cmp.build():pwait()
 cmp.setup({
 	keymap = {
+		preset = "none",
+
 		["<Tab>"] = { "accept", "fallback" },
 		["<S-Tab>"] = { "fallback" },
-		["<CR>"] = { "select_and_accept", "fallback" },
+		["<CR>"] = { "accept", "fallback" },
 
 		["<C-n>"] = { "select_next", "fallback" },
 		["<C-p>"] = { "select_prev", "fallback" },
 
 		["<C-e>"] = { "cancel", "fallback" },
 
-		["<A-n>"] = { "snippet_forward" },
-		["<A-p>"] = { "snippet_backward" },
+		["<A-l>"] = { "snippet_forward" },
+		["<A-h>"] = { "snippet_backward" },
 	},
 
 	sources = {
 		default = { "lsp", "path", "snippets", "buffer" },
 	},
 
-	snippets = {
-		preset = "luasnip",
+	completion = {
+		list = {
+			selection = {
+				preselect = true,
+				auto_insert = false,
+			},
+		},
+
+		menu = {
+			draw = {
+				components = {
+					kind_icon = {
+						text = function(ctx)
+							local icon = ctx.kind_icon
+
+							if ctx.item.source_name == "LSP" then
+								local colorItem = require("nvim-highlight-colors").format(ctx.item.documentation, {
+									kind = ctx.kind,
+								})
+
+								if colorItem and colorItem.abbr ~= "" then
+									icon = colorItem.abbr
+								end
+							end
+
+							return icon .. ctx.icon_gap
+						end,
+
+						highlight = function(ctx)
+							local highlight = "BlinkCmpKind" .. ctx.kind
+
+							if ctx.item.source_name == "LSP" then
+								local colorItem = require("nvim-highlight-colors").format(ctx.item.documentation, {
+									kind = ctx.kind,
+								})
+
+								if colorItem and colorItem.abbr_hl_group then
+									highlight = colorItem.abbr_hl_group
+								end
+							end
+
+							return highlight
+						end,
+					},
+				},
+			},
+		},
 	},
 
 	cmdline = {
