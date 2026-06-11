@@ -61,4 +61,7 @@ vim.pack.add({
 
 	-- which key
 	{ src = github .. "folke/which-key.nvim" },
+
+	-- nvim dev
+	{ src = github .. "folke/lazydev.nvim" },
 })
