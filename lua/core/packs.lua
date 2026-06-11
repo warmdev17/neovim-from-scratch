@@ -18,12 +18,13 @@ vim.pack.add({
 	{ src = github .. "folke/flash.nvim" },
 	{ src = github .. "nvim-mini/mini.pairs" },
 	{ src = github .. "christoomey/vim-tmux-navigator" },
+	{ src = github .. "nvim-treesitter/nvim-treesitter" },
 	{ src = github .. "nvim-treesitter/nvim-treesitter-context" },
+	{ src = github .. "nvim-treesitter/nvim-treesitter-textobjects" },
 	{ src = github .. "OXY2DEV/markview.nvim" },
 	{ src = github .. "nvim-mini/mini.surround" },
 
 	-- lsp
-	{ src = github .. "nvim-treesitter/nvim-treesitter" },
 	{ src = github .. "neovim/nvim-lspconfig" },
 	{ src = github .. "mason-org/mason.nvim" },
 	{ src = github .. "mason-org/mason-lspconfig.nvim" },
