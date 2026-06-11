@@ -314,6 +314,7 @@ cmp.setup({
 	cmdline = {
 		keymap = {
 			preset = "cmdline",
+			["<Tab>"] = { "accept" },
 			["<Right>"] = false,
 			["<Left>"] = false,
 		},
