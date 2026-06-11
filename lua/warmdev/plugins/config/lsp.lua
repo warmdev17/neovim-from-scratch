@@ -1,3 +1,30 @@
+require("lazydev").setup({
+	library = {
+		{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
+		{ path = "snacks.nvim", words = { "Snacks" } },
+	},
+})
+
+require("mason").setup()
+
+require("mason-lspconfig").setup({
+	ensure_installed = {
+		"gopls",
+		"lua_ls",
+		"vtsls",
+		"html",
+		"cssls",
+		"jsonls",
+		"yamlls",
+		"tailwindcss",
+		"stylua",
+		"pyright",
+		"ruff",
+	},
+
+	automatic_enable = false,
+})
+
 local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 vim.lsp.config("gopls", {
@@ -157,5 +184,3 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end
 	end,
 })
-
-require("luasnip.loaders.from_vscode").lazy_load()
