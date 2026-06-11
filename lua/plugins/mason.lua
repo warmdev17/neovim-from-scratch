@@ -13,7 +13,6 @@ require("mason-lspconfig").setup({
 		"stylua",
 		"pyright",
 		"ruff",
-		"black",
 	},
 
 	automatic_enable = false,
