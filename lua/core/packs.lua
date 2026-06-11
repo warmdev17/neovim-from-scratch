@@ -24,6 +24,7 @@ vim.pack.add({
 	{ src = github .. "OXY2DEV/markview.nvim" },
 	{ src = github .. "nvim-mini/mini.surround" },
 	{ src = github .. "nvim-mini/mini.animate" },
+	{ src = github .. "acidsugarx/babel.nvim" },
 
 	-- lsp
 	{ src = github .. "neovim/nvim-lspconfig" },

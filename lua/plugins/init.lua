@@ -1,6 +1,7 @@
 local pluginModules = {
 	"ui",
 	"editor",
+	"tools",
 	"treesitter",
 	"mason",
 	"lsp",
