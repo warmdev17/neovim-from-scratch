@@ -6,16 +6,9 @@ local editorModules = {
 	"mini",
 	"silicon",
 	"babel",
+	"markview",
 }
 
 for _, module in ipairs(editorModules) do
 	require("warmdev.plugins.config.editor." .. module)
 end
-
-require("markview").setup({
-	preview = {
-		enable = true,
-		filetypes = { "markdown", "md", "rmd", "quarto" },
-		ignore_buftypes = {},
-	},
-})
