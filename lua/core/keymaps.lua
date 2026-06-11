@@ -8,6 +8,9 @@ vim.g.tmux_navigator_no_mappings = 1
 vim.g.tmux_navigator_disable_when_zoomed = 1
 vim.g.tmux_navigator_save_on_switch = 2
 
+-- nohlsearch
+map({ "n" }, "<Esc>", "<cmd>nohl<cr>", opts)
+
 -- movement
 map({ "n", "v" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 map({ "n", "v" }, "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
