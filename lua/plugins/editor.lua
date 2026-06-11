@@ -116,6 +116,20 @@ require("snacks").setup({
 	},
 })
 
+local function countNormalWindows()
+	local count = 0
+
+	for _, win in ipairs(vim.api.nvim_tabpage_list_wins(0)) do
+		local config = vim.api.nvim_win_get_config(win)
+
+		if config.relative == "" then
+			count = count + 1
+		end
+	end
+
+	return count
+end
+
 require("oil").setup({
 	default_file_explorer = true,
 	watch_for_changes = true,
@@ -126,7 +140,13 @@ require("oil").setup({
 		show_hidden = true,
 	},
 	keymaps = {
-		["q"] = "actions.close",
+		["q"] = function()
+			if countNormalWindows() > 1 then
+				vim.cmd("close")
+			else
+				vim.cmd("quitall")
+			end
+		end,
 		["<C-t>"] = false,
 	},
 })

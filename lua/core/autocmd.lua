@@ -56,7 +56,6 @@ vim.api.nvim_create_autocmd("FileType", {
 		"notify",
 		"lspinfo",
 		"checkhealth",
-		"oil",
 		"dbout",
 	},
 	callback = function(event)
