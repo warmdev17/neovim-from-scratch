@@ -292,27 +292,19 @@ cmp.setup({
 	},
 
 	cmdline = {
-		enabled = true,
 		keymap = {
-			["<Tab>"] = { "accept", "fallback" },
-			["<S-Tab>"] = { "fallback" },
-			["<CR>"] = { "fallback" },
-
-			["<C-n>"] = { "select_next", "fallback" },
-			["<C-p>"] = { "select_prev", "fallback" },
-
-			["<C-e>"] = { "cancel", "fallback" },
+			preset = "cmdline",
+			["<Right>"] = false,
+			["<Left>"] = false,
 		},
 		completion = {
+			list = { selection = { preselect = false } },
 			menu = {
-				auto_show = true,
+				auto_show = function()
+					return vim.fn.getcmdtype() == ":"
+				end,
 			},
-			list = {
-				selection = {
-					preselect = true,
-					auto_insert = false,
-				},
-			},
+			ghost_text = { enabled = true },
 		},
 	},
 })
