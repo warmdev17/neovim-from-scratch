@@ -5,6 +5,7 @@ local editorModules = {
 	"flash",
 	"mini",
 	"silicon",
+	"babel",
 }
 
 for _, module in ipairs(editorModules) do
