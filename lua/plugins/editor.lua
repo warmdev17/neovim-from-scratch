@@ -318,7 +318,7 @@ cmp.setup({
 			["<Left>"] = false,
 		},
 		completion = {
-			list = { selection = { preselect = false } },
+			list = { selection = { preselect = true } },
 			menu = {
 				auto_show = function()
 					return vim.fn.getcmdtype() == ":"
