@@ -38,6 +38,18 @@ require("oil").setup({
 				vim.cmd("quitall")
 			end
 		end,
+		["d"] = {
+			callback = function()
+				vim.cmd.normal({ "dd", bang = true })
+			end,
+			desc = "Delete Entry",
+		},
+		["w"] = {
+			callback = function()
+				require("oil").save()
+			end,
+			desc = "Save Oil Changes",
+		},
 		["<C-t>"] = false,
 	},
 })
