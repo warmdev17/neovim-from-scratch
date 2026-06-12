@@ -183,6 +183,27 @@ vim.lsp.enable({
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(args)
 		local client = vim.lsp.get_client_by_id(args.data.client_id)
+		local buf = args.buf
+
+		local function map(mode, lhs, rhs, desc)
+			vim.keymap.set(mode, lhs, rhs, {
+				buffer = buf,
+				silent = true,
+				desc = desc,
+			})
+		end
+
+		map("n", "M", function()
+			vim.lsp.buf.hover({
+				border = "single",
+			})
+		end, "Hover Documentation")
+
+		map("n", "<leader>cs", function()
+			vim.lsp.buf.signature_help({
+				border = "single",
+			})
+		end, "Signature Help")
 
 		if not client or client.name ~= "gopls" then
 			return
