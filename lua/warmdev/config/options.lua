@@ -99,6 +99,8 @@ vim.diagnostic.config({
 
 vim.opt.winborder = "single"
 
+vim.g.netrw_nogx = 1 -- disable netrw gx
+
 local originalOpenFloatingPreview = vim.lsp.util.open_floating_preview
 
 vim.lsp.util.open_floating_preview = function(contents, syntax, opts, ...)
