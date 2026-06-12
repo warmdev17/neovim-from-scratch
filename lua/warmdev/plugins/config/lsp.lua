@@ -149,6 +149,22 @@ vim.lsp.config("ruff", {
 	},
 })
 
+vim.lsp.config("emmet_language_server", {
+	capabilities = capabilities,
+	filetypes = {
+		"css",
+		"eruby",
+		"html",
+		"javascript",
+		"javascriptreact",
+		"less",
+		"sass",
+		"scss",
+		"pug",
+		"typescriptreact",
+	},
+})
+
 vim.lsp.enable({
 	"gopls",
 	"vtsls",
@@ -157,6 +173,7 @@ vim.lsp.enable({
 	"cssls",
 	"eslint",
 	"jsonls",
+	"emmet_language_server",
 	"yamlls",
 	"tailwindcss",
 	"pyright",
