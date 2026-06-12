@@ -51,6 +51,7 @@ require("oil").setup({
 			desc = "Save Oil Changes",
 		},
 		["<A-k>"] = "actions.parent",
+		["r"] = "actions.refresh",
 		["<C-t>"] = false,
 	},
 })
