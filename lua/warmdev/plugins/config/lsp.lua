@@ -9,11 +9,15 @@ require("mason").setup()
 
 require("mason-lspconfig").setup({
 	ensure_installed = {
+		"docker_compose_language_service",
+		"docker_language_server",
+		"eslint",
 		"gopls",
 		"lua_ls",
 		"vtsls",
 		"html",
 		"cssls",
+		"emmet_language_server",
 		"jsonls",
 		"yamlls",
 		"tailwindcss",
@@ -151,6 +155,7 @@ vim.lsp.enable({
 	"lua_ls",
 	"html",
 	"cssls",
+	"eslint",
 	"jsonls",
 	"yamlls",
 	"tailwindcss",
