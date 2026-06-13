@@ -80,3 +80,7 @@ map("n", "-", "<C-x>", opts) -- decrement
 map("n", "dw", "vb_d", opts) -- delete word backward
 map({ "n", "v" }, "x", '"_x', opts) -- delete without yank
 map("v", "p", '"_dP') -- paste without replacing register
+
+-- better moving search result
+map("n", "n", "nzzzv")
+map("n", "N", "Nzzzv")
