@@ -22,10 +22,10 @@ map({ "n", "v" }, "<C-d>", "<C-d>zz", opts)
 map({ "n", "v" }, "<C-u>", "<C-u>zz", opts)
 
 -- window resize
-map("n", "<C-S-h>", "<cmd>vertical resize -2<cr>", { desc = "Resize Left" })
-map("n", "<C-S-l>", "<cmd>vertical resize +2<cr>", { desc = "Resize Right" })
-map("n", "<C-S-j>", "<cmd>resize +2<cr>", { desc = "Resize Down" })
-map("n", "<C-S-k>", "<cmd>resize -2<cr>", { desc = "Resize Up" })
+map("n", "<leader>h", "<cmd>vertical resize -2<cr>")
+map("n", "<leader>l", "<cmd>vertical resize +2<cr>")
+map("n", "<leader>j", "<cmd>resize +2<cr>")
+map("n", "<leader>k", "<cmd>resize -2<cr>")
 
 -- Move line up/down
 map("n", "<A-j>", "<cmd>move .+1<cr>==", { desc = "Move Line Down" })
