@@ -54,6 +54,12 @@ map("n", "<s-tab>", ":bprev<cr>", opts)
 -- buffer delete
 map("n", "bd", ":bdelete<cr>", opts)
 
+-- tab
+map("n", "te", "<cmd>tabedit<cr>")
+map("n", "tn", "<cmd>tabnext<cr>")
+map("n", "tp", "<cmd>tabprevious<cr>")
+map("n", "tc", "<cmd>tabclose<cr>")
+
 -- pane split
 map("n", "ss", ":split<cr>", opts)
 map("n", "sv", ":vsplit<cr>", opts)
