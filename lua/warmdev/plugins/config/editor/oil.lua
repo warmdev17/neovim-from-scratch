@@ -52,6 +52,16 @@ require("oil").setup({
 		},
 		["<A-k>"] = "actions.parent",
 		["r"] = "actions.refresh",
+		["<CR>"] = {
+			callback = function()
+				require("oil.actions").select.callback({
+					vertical = false,
+					horizontal = false,
+					tab = false,
+				})
+			end,
+			mode = "n",
+		},
 		["<C-t>"] = false,
 	},
 })
