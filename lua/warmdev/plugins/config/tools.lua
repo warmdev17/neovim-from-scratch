@@ -18,6 +18,11 @@ vim.g.db_ui_table_helpers = {
 	},
 }
 
+vim.g.live_server = {
+	port = 5000,
+	browser = false,
+}
+
 map("n", "<leader>rr", function()
 	require("kulala").run()
 end, { desc = "Run request" })
