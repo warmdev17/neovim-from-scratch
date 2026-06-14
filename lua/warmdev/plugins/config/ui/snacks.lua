@@ -149,3 +149,7 @@ end, { desc = "Workspace Diagnostics" })
 map("n", "<leader>cD", function()
 	Snacks.picker.diagnostics_buffer()
 end, { desc = "Buffer Diagnostics" })
+
+map("n", "<leader>h", function()
+	Snacks.picker.help()
+end, { desc = "Helps" })

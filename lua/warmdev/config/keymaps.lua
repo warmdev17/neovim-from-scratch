@@ -21,12 +21,6 @@ map({ "n", "v", "o" }, "L", "$", opts)
 map({ "n", "v" }, "<C-d>", "<C-d>zz", opts)
 map({ "n", "v" }, "<C-u>", "<C-u>zz", opts)
 
--- window resize
-map("n", "<leader>h", "<cmd>vertical resize -2<cr>")
-map("n", "<leader>l", "<cmd>vertical resize +2<cr>")
-map("n", "<leader>j", "<cmd>resize +2<cr>")
-map("n", "<leader>k", "<cmd>resize -2<cr>")
-
 -- Move line up/down
 map("n", "<A-j>", "<cmd>move .+1<cr>==", { desc = "Move Line Down" })
 map("n", "<A-k>", "<cmd>move .-2<cr>==", { desc = "Move Line Up" })
