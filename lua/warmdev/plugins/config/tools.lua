@@ -19,8 +19,8 @@ vim.g.db_ui_table_helpers = {
 }
 
 vim.g.live_server = {
-	port = 5000,
-	browser = false,
+	port = 3000,
+	browser = true,
 }
 
 map("n", "<leader>rr", function()
