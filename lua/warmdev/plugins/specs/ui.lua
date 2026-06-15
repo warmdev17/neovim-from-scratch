@@ -10,4 +10,5 @@ return {
 	{ src = github .. "xzbdmw/colorful-menu.nvim" },
 	{ src = github .. "folke/which-key.nvim" },
 	{ src = github .. "rachartier/tiny-inline-diagnostic.nvim" },
+	{ src = github .. "lukas-reineke/indent-blankline.nvim" },
 }

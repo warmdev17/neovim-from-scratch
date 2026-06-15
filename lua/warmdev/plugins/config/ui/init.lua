@@ -5,6 +5,7 @@ local uiModules = {
 	"snacks",
 	"which-key",
 	"colorizer",
+	"indent",
 }
 
 for _, module in ipairs(uiModules) do
