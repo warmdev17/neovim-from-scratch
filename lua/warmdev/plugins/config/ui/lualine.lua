@@ -26,6 +26,8 @@ require("lualine").setup({
 						c = "C",
 						R = "R",
 						t = "T",
+
+						no = "O-P",
 					}
 
 					return names[m] or str
