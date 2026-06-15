@@ -29,8 +29,7 @@ require("lualine").setup({
 
 						no = "O-P",
 					}
-
-					return names[m] or str
+					return names[m] or names[m] or "N"
 				end,
 			},
 		},
