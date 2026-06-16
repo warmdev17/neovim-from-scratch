@@ -205,6 +205,22 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			})
 		end, "Signature Help")
 
+		map("n", "gd", function()
+			Snacks.picker.lsp_definitions()
+		end, "Goto Definition")
+
+		map("n", "gr", function()
+			Snacks.picker.lsp_references()
+		end, "References")
+
+		map("n", "gI", function()
+			Snacks.picker.lsp_implementations()
+		end, "Implementations")
+
+		map("n", "gy", function()
+			Snacks.picker.lsp_type_definitions()
+		end, "Type Definitions")
+
 		if not client or client.name ~= "gopls" then
 			return
 		end
