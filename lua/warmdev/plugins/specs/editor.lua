@@ -13,4 +13,5 @@ return {
 	{ src = github .. "christoomey/vim-tmux-navigator" },
 	{ src = github .. "michaelrommel/nvim-silicon" },
 	{ src = github .. "chrishrb/gx.nvim" },
+	{ src = github .. "chrisgrieser/nvim-spider" },
 }
