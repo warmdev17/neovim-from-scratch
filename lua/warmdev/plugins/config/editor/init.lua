@@ -9,6 +9,7 @@ local editorModules = {
 	"markview",
 	"gx",
 	"spider",
+	"yanky",
 }
 
 for _, module in ipairs(editorModules) do

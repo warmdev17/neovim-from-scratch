@@ -153,3 +153,27 @@ end, { desc = "Buffer Diagnostics" })
 map("n", "<leader>h", function()
 	Snacks.picker.help()
 end, { desc = "Helps" })
+
+map({ "n", "x" }, "<leader>p", function()
+	Snacks.picker.yanky()
+end, { desc = "Open yank history" })
+
+map({ "n", "x" }, "<leader>v", function()
+	Snacks.picker.cliphist()
+end, { desc = "Open cliphist" })
+
+map("n", "<leader>cp", function()
+	Snacks.picker.colorschemes()
+end, { desc = "Colorschemes picker" })
+
+map("n", "<leader>i", function()
+	Snacks.picker.icons()
+end, { desc = "Icons picker" })
+
+map("n", "<leader>z", function()
+	Snacks.picker.zoxide()
+end, { desc = "Zoxide explorer" })
+
+map("n", "<leader>n", function()
+	Snacks.picker.notifications()
+end, { desc = "Open notifications" })
