@@ -4,6 +4,7 @@ return {
 	{ src = github .. "stevearc/conform.nvim" },
 	{ src = github .. "mfussenegger/nvim-lint" },
 	{ src = github .. "mistweaverco/kulala.nvim" },
+	{ src = github .. "folke/todo-comments.nvim" },
 	{ src = github .. "barrettruth/live-server.nvim" },
 	{ src = github .. "tpope/vim-dadbod" },
 	{ src = github .. "kristijanhusak/vim-dadbod-ui" },

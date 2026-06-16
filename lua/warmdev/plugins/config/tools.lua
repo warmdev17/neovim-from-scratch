@@ -6,6 +6,16 @@ require("kulala").setup({
 	kulala_keymaps_prefix = "",
 })
 
+require("todo-comments").setup()
+
+map("n", "]t", function()
+	require("todo-comments").jump_next()
+end, { desc = "Next todo comment" })
+
+map("n", "[t", function()
+	require("todo-comments").jump_prev()
+end, { desc = "Previous todo comment" })
+
 vim.g.db_ui_use_nerd_fonts = 1
 vim.g.db_ui_show_database_icon = 1
 vim.g.db_ui_save_location = vim.fn.stdpath("data") .. "/dadbod-ui"
