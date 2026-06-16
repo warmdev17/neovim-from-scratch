@@ -6,4 +6,5 @@ return {
 	{ src = github .. "mason-org/mason-lspconfig.nvim" },
 	{ src = github .. "b0o/SchemaStore.nvim" },
 	{ src = github .. "folke/lazydev.nvim" },
+	{ src = github .. "rachartier/tiny-code-action.nvim" },
 }

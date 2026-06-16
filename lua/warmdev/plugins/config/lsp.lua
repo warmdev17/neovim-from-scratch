@@ -29,6 +29,12 @@ require("mason-lspconfig").setup({
 	automatic_enable = false,
 })
 
+require("tiny-code-action").setup({})
+
+vim.keymap.set({ "n", "x" }, "<leader>ca", function()
+	require("tiny-code-action").code_action({})
+end, { noremap = true, silent = true })
+
 local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 vim.lsp.config("gopls", {
