@@ -44,6 +44,10 @@
       "rev": "2d7c2db2507fa3c4956142ee607431ddb2828639",
       "src": "https://github.com/stevearc/dressing.nvim"
     },
+    "dropbar.nvim": {
+      "rev": "808ba31cde89aec8833e9789f5e04557cd31c9e1",
+      "src": "https://github.com/Bekaboo/dropbar.nvim"
+    },
     "flash.nvim": {
       "rev": "fcea7ff883235d9024dc41e638f164a450c14ca2",
       "src": "https://github.com/folke/flash.nvim"
