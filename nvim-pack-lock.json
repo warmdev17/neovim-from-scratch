@@ -32,6 +32,10 @@
       "rev": "0303a7208dba448c459767486a38a6ec05c4216b",
       "src": "https://github.com/catppuccin/nvim"
     },
+    "cellular-automaton.nvim": {
+      "rev": "1606e9d5d04ff254023c3f3c62842d065708d6d3",
+      "src": "https://github.com/Eandrju/cellular-automaton.nvim"
+    },
     "colorful-menu.nvim": {
       "rev": "13f9b7eaa9cd2901b4f8915cfb2483c3be4c8c20",
       "src": "https://github.com/xzbdmw/colorful-menu.nvim"
@@ -43,6 +47,10 @@
     "dressing.nvim": {
       "rev": "2d7c2db2507fa3c4956142ee607431ddb2828639",
       "src": "https://github.com/stevearc/dressing.nvim"
+    },
+    "drop.nvim": {
+      "rev": "f27c147af59c41712dd3d513cb03f4fae7aec46d",
+      "src": "https://github.com/folke/drop.nvim"
     },
     "dropbar.nvim": {
       "rev": "808ba31cde89aec8833e9789f5e04557cd31c9e1",
@@ -64,6 +72,10 @@
       "rev": "ba9c408fc0130fc4548760c3933a81b58fc50de8",
       "src": "https://github.com/chrishrb/gx.nvim"
     },
+    "hardtime.nvim": {
+      "rev": "b4e431934af1fe224a3a801f632c008278cb7628",
+      "src": "https://github.com/m4xshen/hardtime.nvim"
+    },
     "inc-rename.nvim": {
       "rev": "0074b551a17338ccdcd299bd86687cc651bcb33d",
       "src": "https://github.com/smjonas/inc-rename.nvim"
@@ -72,6 +84,10 @@
       "rev": "d28a3f70721c79e3c5f6693057ae929f3d9c0a03",
       "src": "https://github.com/lukas-reineke/indent-blankline.nvim"
     },
+    "killersheep.nvim": {
+      "rev": "d916d097af8c86481053045be2e468fa7cb312c5",
+      "src": "https://github.com/seandewar/killersheep.nvim"
+    },
     "kulala.nvim": {
       "rev": "69250f64e60f75c010feac413576acbd9ffa4ec8",
       "src": "https://github.com/mistweaverco/kulala.nvim"
@@ -79,6 +95,10 @@
     "lazydev.nvim": {
       "rev": "ff2cbcba459b637ec3fd165a2be59b7bbaeedf0d",
       "src": "https://github.com/folke/lazydev.nvim"
+    },
+    "let-it-snow.nvim": {
+      "rev": "15ad478c8f903f8c2addad08fed1d8429bc01bde",
+      "src": "https://github.com/marcussimonsen/let-it-snow.nvim"
     },
     "live-server.nvim": {
       "rev": "f1a2defb7bc3bfc37bcb455fafdf6d61113d71c8",

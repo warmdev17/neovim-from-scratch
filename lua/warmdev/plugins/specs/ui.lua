@@ -12,4 +12,8 @@ return {
 	{ src = github .. "rachartier/tiny-inline-diagnostic.nvim" },
 	{ src = github .. "lukas-reineke/indent-blankline.nvim" },
 	{ src = github .. "Bekaboo/dropbar.nvim" },
+	{ src = github .. "Eandrju/cellular-automaton.nvim" },
+	{ src = github .. "seandewar/killersheep.nvim" },
+	{ src = github .. "m4xshen/hardtime.nvim" },
+	{ src = github .. "marcussimonsen/let-it-snow.nvim" },
 }
