@@ -55,9 +55,18 @@ opt.completeopt = { "menu", "menuone", "noselect" }
 
 opt.foldmethod = "expr"
 opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+opt.foldtext = ""
+opt.foldcolumn = "1"
 opt.foldlevel = 99
 opt.foldlevelstart = 99
 opt.foldenable = true
+opt.fillchars = {
+	foldopen = " ",
+	foldclose = "",
+	fold = " ",
+	foldsep = " ",
+	eob = " ",
+}
 
 opt.hidden = true
 opt.confirm = true
