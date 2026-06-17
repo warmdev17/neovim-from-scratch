@@ -184,6 +184,7 @@ vim.lsp.enable({
 	"tailwindcss",
 	"pyright",
 	"ruff",
+	"harper_ls",
 })
 
 vim.api.nvim_create_autocmd("LspAttach", {

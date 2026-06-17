@@ -31,6 +31,8 @@ require("conform").setup({
 		rest = { "kulala" },
 
 		sql = { "pg_format" },
+
+		toml = { "taplo" },
 	},
 
 	format_on_save = function(bufnr)
