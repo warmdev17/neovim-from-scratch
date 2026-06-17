@@ -53,6 +53,10 @@ require("snacks").setup({
 	},
 	notifier = {
 		enabled = true,
+		timeout = 3000,
+		style = "compact",
+		top_down = true,
+		date_format = "%R",
 	},
 	terminal = {
 		enabled = true,
@@ -112,6 +116,18 @@ require("snacks").setup({
 				local word = vim.fn.expand("<cword>")
 				return math.max(20, math.min(60, #word + 10))
 			end,
+		},
+		notification_history = {
+			border = "single",
+			width = 0.8,
+			height = 0.8,
+			wo = {
+				winhighlight = table.concat({
+					"Normal:NormalFloat",
+					"NormalNC:NormalFloat",
+					"FloatBorder:FloatBorder",
+				}, ","),
+			},
 		},
 	},
 })
@@ -175,5 +191,5 @@ map("n", "<leader>z", function()
 end, { desc = "Zoxide explorer" })
 
 map("n", "<leader>n", function()
-	Snacks.picker.notifications()
+	Snacks.notifier.show_history()
 end, { desc = "Open notifications" })
