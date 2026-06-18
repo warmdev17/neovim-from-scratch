@@ -8,6 +8,7 @@ local uiModules = {
 	"indent",
 	"dropbar",
 	"hardtime",
+	"screenkey",
 }
 
 for _, module in ipairs(uiModules) do

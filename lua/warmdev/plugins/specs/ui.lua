@@ -16,4 +16,5 @@ return {
 	{ src = github .. "seandewar/killersheep.nvim" },
 	{ src = github .. "m4xshen/hardtime.nvim" },
 	{ src = github .. "marcussimonsen/let-it-snow.nvim" },
+	{ src = github .. "NStefan002/screenkey.nvim" },
 }
