@@ -1,5 +1,6 @@
 local opt = vim.opt
 
+opt.mouse = "a"
 opt.number = true
 opt.relativenumber = true
 opt.signcolumn = "yes"
