@@ -1,6 +1,12 @@
 require("snacks").setup({
 	picker = {
 		enabled = true,
+		sources = {
+			files = {
+				hidden = true,
+				ignored = true,
+			},
+		},
 		layouts = {
 			default = {
 				layout = {
@@ -189,6 +195,10 @@ end, { desc = "Icons picker" })
 map("n", "<leader>z", function()
 	Snacks.picker.zoxide()
 end, { desc = "Zoxide explorer" })
+
+map("n", "<leader>fg", function()
+	Snacks.picker.git_status()
+end, { desc = "Git status picker file" })
 
 map("n", "<leader>n", function()
 	Snacks.notifier.show_history()
