@@ -200,7 +200,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			})
 		end
 
-		map("n", "M", function()
+		map("n", "K", function()
 			vim.lsp.buf.hover({
 				border = "single",
 			})
