@@ -15,6 +15,10 @@ cmp.setup({
 
 		["<A-l>"] = { "snippet_forward" },
 		["<A-h>"] = { "snippet_backward" },
+
+		["<C-Space>"] = { "show", "show_documentation", "hide_documentation" },
+		["<C-f>"] = { "scroll_documentation_down", "fallback" },
+		["<C-b>"] = { "scroll_documentation_up", "fallback" },
 	},
 
 	sources = {
@@ -34,6 +38,10 @@ cmp.setup({
 				preselect = true,
 				auto_insert = false,
 			},
+		},
+		documentation = {
+			auto_show = true,
+			auto_show_delay_ms = 200,
 		},
 
 		menu = {
