@@ -16,7 +16,7 @@ map({ "n", "v" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true
 map({ "n", "v" }, "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 map("n", "J", "mzJ`z", opts)
 map({ "n", "v", "o" }, "H", "^", opts)
-map({ "n", "v", "o" }, "L", "$", opts)
+map({ "n", "v", "o" }, "L", "g_", opts)
 map({ "n", "v" }, "<C-d>", "<C-d>zz", opts)
 map({ "n", "v" }, "<C-u>", "<C-u>zz", opts)
 
