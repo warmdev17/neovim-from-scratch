@@ -85,6 +85,16 @@ local function mapMove(nextKey, prevKey, capture, desc)
 	end, { desc = "Previous " .. desc })
 end
 
+local function mapMoveEnd(nextKey, prevKey, capture, desc)
+	vim.keymap.set({ "n", "x", "o" }, nextKey, function()
+		move.goto_next_end(capture, "textobjects")
+	end, { desc = "Next End " .. desc })
+
+	vim.keymap.set({ "n", "x", "o" }, prevKey, function()
+		move.goto_previous_end(capture, "textobjects")
+	end, { desc = "Previous End " .. desc })
+end
+
 mapSelect("af", "@function.outer", "Around Function")
 mapSelect("if", "@function.inner", "Inside Function")
 
@@ -105,6 +115,14 @@ mapMove("]c", "[c", "@class.outer", "Class")
 mapMove("]l", "[l", "@loop.outer", "Loop")
 mapMove("]i", "[i", "@conditional.outer", "Conditional")
 mapMove("]a", "[a", "@parameter.inner", "Argument")
+mapMove("]]", "[[", "@class.outer", "Class")
+mapMove("][", "[]", "@function.outer", "Function")
+
+mapMoveEnd("]F", "[F", "@function.outer", "Function")
+mapMoveEnd("]C", "[C", "@class.outer", "Class")
+mapMoveEnd("]L", "[L", "@loop.outer", "Loop")
+mapMoveEnd("]I", "[I", "@conditional.outer", "Conditional")
+mapMoveEnd("]A", "[A", "@parameter.inner", "Argument")
 
 vim.keymap.set("n", "<leader>sa", function()
 	swap.swap_next("@parameter.inner")
