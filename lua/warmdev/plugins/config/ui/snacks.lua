@@ -5,6 +5,15 @@ require("snacks").setup({
 			files = {
 				hidden = true,
 				ignored = true,
+				exclude = {
+					".venv",
+					"venv",
+					"env",
+					"__pycache__",
+					".mypy_cache",
+					".pytest_cache",
+					"node_modules",
+				},
 			},
 		},
 		layouts = {

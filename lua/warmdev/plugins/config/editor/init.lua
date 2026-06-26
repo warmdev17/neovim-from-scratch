@@ -10,6 +10,7 @@ local editorModules = {
 	"gx",
 	"spider",
 	"yanky",
+	"venv-selector",
 }
 
 for _, module in ipairs(editorModules) do

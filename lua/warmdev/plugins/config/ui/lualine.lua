@@ -1,4 +1,5 @@
 local icons = require("warmdev.config.icons")
+local venv = require("venv-selector.statusline.lualine")
 require("lualine").setup({
 	options = {
 		icons_enabled = true,
@@ -75,6 +76,7 @@ require("lualine").setup({
 				"filetype",
 				icon_only = true,
 			},
+			venv.render,
 		},
 
 		lualine_y = { "progress" },
