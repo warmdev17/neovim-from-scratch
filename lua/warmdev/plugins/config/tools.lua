@@ -4,6 +4,18 @@ require("kulala").setup({
 	global_keymaps = false,
 	global_keymaps_prefix = "<leader>r",
 	kulala_keymaps_prefix = "",
+
+	vim.api.nvim_create_autocmd("FileType", {
+		pattern = "kulala_ui",
+		callback = function(event)
+			local mapOpts = { buffer = event.buf, silent = true, noremap = true }
+
+			vim.keymap.set("n", "<C-h>", "<C-w>h", mapOpts)
+			vim.keymap.set("n", "<C-j>", "<C-w>j", mapOpts)
+			vim.keymap.set("n", "<C-k>", "<C-w>k", mapOpts)
+			vim.keymap.set("n", "<C-l>", "<C-w>l", mapOpts)
+		end,
+	}),
 })
 
 require("todo-comments").setup()
