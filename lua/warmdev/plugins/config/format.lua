@@ -25,7 +25,7 @@ require("conform").setup({
 		markdown = { "prettierd" },
 		yaml = { "prettierd" },
 
-		python = { "black" },
+		python = { "ruff" },
 
 		http = { "kulala" },
 		rest = { "kulala" },
