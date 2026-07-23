@@ -31,6 +31,8 @@ require("conform").setup({
 		rest = { "kulala" },
 
 		sql = { "pg_format" },
+		dbout = { "pg_format" },
+		dbui = { "pg_format" },
 
 		toml = { "taplo" },
 	},
