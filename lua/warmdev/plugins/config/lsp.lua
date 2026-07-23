@@ -146,6 +146,29 @@ vim.lsp.config("pyright", {
 	},
 })
 
+vim.lsp.config("basedpyright", {
+	capabilities = capabilities,
+	on_attach = function(client, bufnr)
+		client.server_capabilities.semanticTokensProvider = nil
+	end,
+	settings = {
+		python = {
+			analysis = {
+				indexing = true,
+			},
+		},
+		basedpyright = {
+			analysis = {
+				autoImportCompletions = true,
+				typeCheckingMode = "basic",
+				autoSearchPaths = true,
+				useLibraryCodeForTypes = true,
+				diagnosticMode = "workspace",
+			},
+		},
+	},
+})
+
 vim.lsp.config("ruff", {
 	capabilities = capabilities,
 	init_options = {
@@ -171,6 +194,10 @@ vim.lsp.config("emmet_language_server", {
 	},
 })
 
+vim.lsp.config("postgres_lsp", {
+	cmd = { "postgres-language-server", "lsp-proxy" },
+})
+
 vim.lsp.enable({
 	"gopls",
 	"vtsls",
@@ -182,9 +209,10 @@ vim.lsp.enable({
 	"emmet_language_server",
 	"yamlls",
 	"tailwindcss",
-	"pyright",
+	"basedpyright",
 	"ruff",
 	"harper_ls",
+	"postgres_lsp",
 })
 
 vim.api.nvim_create_autocmd("LspAttach", {
