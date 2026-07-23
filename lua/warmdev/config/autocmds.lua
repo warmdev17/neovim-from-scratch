@@ -72,6 +72,7 @@ vim.api.nvim_create_autocmd("FileType", {
 		"rust",
 		"javascript",
 		"typescript",
+		"typescriptreact",
 		"tsx",
 		"python",
 		"go",
