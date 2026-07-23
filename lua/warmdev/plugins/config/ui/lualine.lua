@@ -3,7 +3,43 @@ local venv = require("venv-selector.statusline.lualine")
 require("lualine").setup({
 	options = {
 		icons_enabled = true,
-		theme = "auto",
+		theme = {
+			normal = {
+				a = { bg = "#89b4fa", fg = "#1e1e2e", gui = "bold" },
+				b = { bg = "#313244", fg = "#89b4fa" },
+				c = { bg = "#181825", fg = "#cdd6f4" },
+			},
+			insert = {
+				a = { bg = "#a6e3a1", fg = "#1e1e2e", gui = "bold" },
+				b = { bg = "#313244", fg = "#a6e3a1" },
+				c = { bg = "#181825", fg = "#cdd6f4" },
+			},
+			visual = {
+				a = { bg = "#cba6f7", fg = "#1e1e2e", gui = "bold" },
+				b = { bg = "#313244", fg = "#cba6f7" },
+				c = { bg = "#181825", fg = "#cdd6f4" },
+			},
+			replace = {
+				a = { bg = "#f38ba8", fg = "#1e1e2e", gui = "bold" },
+				b = { bg = "#313244", fg = "#f38ba8" },
+				c = { bg = "#181825", fg = "#cdd6f4" },
+			},
+			command = {
+				a = { bg = "#f9e2af", fg = "#1e1e2e", gui = "bold" },
+				b = { bg = "#313244", fg = "#f9e2af" },
+				c = { bg = "#181825", fg = "#cdd6f4" },
+			},
+			terminal = {
+				a = { bg = "#a6e3a1", fg = "#1e1e2e", gui = "bold" },
+				b = { bg = "#313244", fg = "#a6e3a1" },
+				c = { bg = "#181825", fg = "#cdd6f4" },
+			},
+			inactive = {
+				a = { bg = "#1e1e2e", fg = "#7f849c" },
+				b = { bg = "#1e1e2e", fg = "#7f849c" },
+				c = { bg = "#1e1e2e", fg = "#7f849c" },
+			},
+		},
 		component_separators = { left = "│", right = "│" },
 		section_separators = { left = "", right = "" },
 		globalstatus = true,

@@ -16,4 +16,5 @@ return {
 	{ src = github .. "chrisgrieser/nvim-spider" },
 	{ src = github .. "gbprod/yanky.nvim" },
 	{ src = github .. "linux-cultist/venv-selector.nvim" },
+	{ src = github .. "obsidian-nvim/obsidian.nvim" },
 }
