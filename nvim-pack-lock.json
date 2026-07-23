@@ -184,6 +184,10 @@
       "rev": "dfbfaa967a6f7ec50789bead7ef87e336c1fa63c",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
+    "obsidian.nvim": {
+      "rev": "0db04cc639488a3a034016213df839b2d0f528a4",
+      "src": "https://github.com/obsidian-nvim/obsidian.nvim"
+    },
     "oil-git.nvim": {
       "rev": "54de208323d00c519e26280f8b5b4b821d32f955",
       "src": "https://github.com/malewicz1337/oil-git.nvim"
