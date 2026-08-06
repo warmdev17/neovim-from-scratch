@@ -1,8 +1,8 @@
 require("catppuccin").setup({
 	flavour = "mocha",
-	transparent_background = true,
+	transparent_background = false,
 	float = {
-		transparent = true,
+		transparent = false,
 		solid = true,
 	},
 	styles = {
@@ -26,7 +26,7 @@ require("catppuccin").setup({
 	},
 	custom_highlights = function(colors)
 		return {
-			-- FloatBorder = { fg = colors.blue, bg = colors.mantle },
+			FloatBorder = { fg = colors.blue, bg = colors.mantle },
 		}
 	end,
 })
