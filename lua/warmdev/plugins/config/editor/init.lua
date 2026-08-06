@@ -11,6 +11,7 @@ local editorModules = {
 	"spider",
 	"yanky",
 	"venv-selector",
+	"obsidian",
 }
 
 for _, module in ipairs(editorModules) do

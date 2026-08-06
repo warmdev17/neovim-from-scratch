@@ -68,6 +68,10 @@
       "rev": "25050e4ed39e628282831d4cbecb1850454ce915",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
     },
+    "gruvbox": {
+      "rev": "154eb5ff5b96d0641307113fa385eaf0d36d9796",
+      "src": "https://github.com/ellisonleao/gruvbox.nvim"
+    },
     "gx.nvim": {
       "rev": "ba9c408fc0130fc4548760c3933a81b58fc50de8",
       "src": "https://github.com/chrishrb/gx.nvim"
@@ -140,6 +144,10 @@
       "rev": "9fd5ebef2b34cc4ac3c0f1811a6726ea6d92fa91",
       "src": "https://github.com/nvim-mini/mini.surround"
     },
+    "multicursor.nvim": {
+      "rev": "704b99f10a72cc05d370cfeb294ff83412a8ab55",
+      "src": "https://github.com/jake-stewart/multicursor.nvim"
+    },
     "nvim-highlight-colors": {
       "rev": "e4c7af0211866162d999ce0bdd6a029302e19139",
       "src": "https://github.com/brenoprata10/nvim-highlight-colors"
@@ -196,6 +204,10 @@
       "rev": "b73018b75affd13fa38e2fc94ef753b465f770d7",
       "src": "https://github.com/stevearc/oil.nvim"
     },
+    "python-import.nvim": {
+      "rev": "798a7dfc2993099ce3f9e7cac8872fb2bc2a484d",
+      "src": "https://github.com/kiyoon/python-import.nvim"
+    },
     "screenkey.nvim": {
       "rev": "740e238d1f143cb5f3a9d932f9c5142d3581b986",
       "src": "https://github.com/NStefan002/screenkey.nvim"
@@ -203,6 +215,10 @@
     "snacks.nvim": {
       "rev": "882c996cf28183f4d63640de0b4c02ec886d01f2",
       "src": "https://github.com/folke/snacks.nvim"
+    },
+    "sqls.nvim": {
+      "rev": "45e2ea8a684a9a194e8adbde77a02e7ac77f6d4e",
+      "src": "https://github.com/nanotee/sqls.nvim"
     },
     "tiny-code-action.nvim": {
       "rev": "0d040ed81f7953118b81cd12681fcdfcac069803",
